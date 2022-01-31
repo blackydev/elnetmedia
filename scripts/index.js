@@ -41,7 +41,6 @@ icnContainerId.onclick = navAction;
     let year = today.getFullYear() - 1996;
     locationToInsertion.textContent = year;
     let works = 10 * 20 * 12 * year;
-    console.log(works);
     locationToInsertion = document.querySelector("#js-exp-works");
     locationToInsertion.textContent = Math.round(works / 10000) * 10000 + "+";
 })();
