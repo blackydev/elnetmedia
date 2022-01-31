@@ -113,6 +113,7 @@
      position: absolute;
      top: 50%;
      transform: translateY(-50%);
+     height: 75%;
  }
 
  #icn-container {
@@ -236,18 +237,21 @@
      height: 100vh;
      background: var(--color2);
      transition: .3s;
-     display: flex;
-     align-items: center;
-     justify-content: center;
      z-index: 1;
      color: white;
+     display: flex;
+     align-items: flex-end;
+     justify-content: center;
  }
 
  #nav-panel {
-     position: relative;
+     position: absolute;
+     bottom: 50%;
      width: var(--contentsWidth);
      max-width: var(--contentsMaxWidth);
-     transform: translateX(-100vw);
+     max-height: calc(100% - 100px);
+     transform: translateX(-100vw) translateY(50%);
+
      display: flex;
      flex-direction: column;
      flex-wrap: wrap;
@@ -264,9 +268,10 @@
  }
 
  .nav-choice {
+     max-width: fit-content;
+     margin: 0 8px 8px 0;
      font-size: 40px;
      font-weight: 500;
-     line-height: 50px;
      cursor: pointer;
  }
 
@@ -290,11 +295,11 @@
 
  @keyframes navPanelMove {
      0% {
-         transform: translateX(-100vw);
+         transform: translateX(-100vw) translateY(50%);
      }
 
      100% {
-         transform: translateX(0);
+         transform: translateX(0) translateY(50%);
      }
  }
 
@@ -525,6 +530,13 @@
 
  #footer-nav {
      font-size: 14px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ #footer-nav>* {
+     max-width: fit-content;
+     margin-bottom: 5px;
  }
 
  [id*="js-scroll-link-footer-"] {
@@ -583,16 +595,6 @@
      opacity: 0;
  }
 
- @media screen and (max-width: 1000px) {
-     #nav-panel {
-         max-height: calc(100% - 160px);
-     }
-
-     .nav-choice {
-         font-size: 4vh;
-         line-height: 6vh;
-     }
- }
 
  @media screen and (max-width: 480px) {
      #header-container {
@@ -647,6 +649,39 @@
          padding-bottom: 50px;
      }
  }
+
+
+ @media screen and (max-width: 1200px) {
+     .nav-choice {
+         font-size: 30px;
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+     .nav-choice {
+         font-size: 25px;
+     }
+ }
+
+ @media screen and (max-width: 320px)  {
+     #menu {
+         height: 55px;
+     }
+
+     .nav-choice {
+         font-size: 16px;
+     }
+ }
+
+ @media screen and (max-width: 640px) and (orientation: landscape) {
+    #menu {
+        height: 55px;
+    }
+
+    .nav-choice {
+        font-size: 16px;
+    }
+}
 
  @media screen and (min-width: 481px) {
 
