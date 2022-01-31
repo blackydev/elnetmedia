@@ -512,7 +512,7 @@
      text-align: center;
  }
 
- #contact-mail:hover {
+ .contact-hover:hover {
      transform: scale(1.01);
  }
 
