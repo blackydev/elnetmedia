@@ -98,18 +98,18 @@ for (let i = 0; i < sectionsData.length; i++) {
 }
 
 // NADANIE KLASY Z TRANSITION DLA ANIMACJI POKAZYWANIA
-let elements = document.querySelectorAll(".js__scroll-animation");
+let elements = document.querySelectorAll(".js_scroll-animation");
 for (let i = 0; i < elements.length; i++) {
     elements[i].style.transition = "1s";
 }
 
 // NADANIE KLASY DLA ANIMACJI PLYNNEGO POKAZYWANIA ELEMENTU PRZY SCROLLU
 let scrollShowAnimation = setInterval(() => {
-    let elements = document.querySelectorAll(".js__scroll-animation");
+    let elements = document.querySelectorAll(".js_scroll-animation");
     if (elements.lenght != 0)
         for (let i = 0; i < elements.length; i++) {
             if (elements[i].getBoundingClientRect().bottom < window.scrollY + window.innerHeight * .7) {
-                elements[i].classList.remove("js__scroll-animation");
+                elements[i].classList.remove("js_scroll-animation");
                 setTimeout(() => {
                     elements[i].style.transition = null;
                 }, 2000);
@@ -121,11 +121,11 @@ scrollShowAnimation;
 
 window.onload = function () {
     // ZAŁADOWANIE RESZTY OBRAZKÓW PO LOADZIE STRONY
-    let images = document.querySelectorAll(".js__lazy-loading");
+    let images = document.querySelectorAll(".js_lazy-loading");
     for (let i = 0; i < images.length; i++) {
         let srcAttribute = images[i].getAttribute("data-src");
         images[i].setAttribute("src", srcAttribute);
-        images[i].classList.remove("js__lazy-loading");
+        images[i].classList.remove("js_lazy-loading");
         images[i].removeAttribute("data-src");
     }
 }
