@@ -105,8 +105,10 @@ h3 {
     font-weight: 500;
 }
 
- h4 {
+ h4,
+ .h4-style {
     font-weight: 500;
+    font-size: 1rem;
  }
 
  .inline {
@@ -206,22 +208,23 @@ h3 {
      align-items: center;
      color: white;
      cursor: default;
+
  }
 
 header>picture {
-     position: absolute;
+    position: absolute;
      top: 0;
      left: 0;
      height: 100%;
      width: 100%;
      overflow: hidden;
-     filter: brightness(.8);
+     filter: brightness(.5);
      z-index: -1;
  }
 
  #header-img {
-     position: absolute;
-     height: 100%;
+    position: absolute;
+     min-height: 100%;
      min-width: 100%;
      top: 50%;
      left: 0;
@@ -249,11 +252,11 @@ header>picture {
      height: 100vh;
      background: var(--color2);
      transition: 0.08s;
-     z-index: 1;
      color: white;
      display: flex;
      align-items: flex-end;
      justify-content: center;
+     z-index: 1; 
  }
 
  #nav-panel {
@@ -266,7 +269,7 @@ header>picture {
 
      display: flex;
      flex-direction: column;
-          flex-wrap: wrap;
+     flex-wrap: wrap;
  }
 
  #nav-panel.active {
@@ -325,6 +328,7 @@ header>picture {
      align-items: center;
      flex-direction: column;
      width: 100%;
+     z-index: 0;
  }
 
  section {
@@ -604,7 +608,7 @@ header>picture {
 
  .__style-color-2 {
      background: var(--color4);
-     color: var(--color2);
+     color: black;
  }
 
  .__style-color-3 {
@@ -627,7 +631,7 @@ header>picture {
  }
 
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 550px) {
      #header-box {
          justify-content: center;
          position: absolute;
