@@ -44,7 +44,7 @@
      --contentsMaxWidth: 1320px;
      --navContent1: 160%;
      --navContent2: 80%;
-     --color1: #1da1f2;
+     --color1: #188cd4;
      --color2: #222831;
      --color3: #393E46;
      --color4: #EEEEEE;
@@ -110,6 +110,7 @@ h3 {
     font-weight: 500;
     font-size: 1rem;
  }
+
 
  .inline {
      display: inline;
@@ -412,7 +413,7 @@ header>picture {
      font-size: 16px;
  }
 
- .offer-body>h5 {
+ .offer-body>h4 {
     font-size: 16px;
     font-weight: 300;
 }
