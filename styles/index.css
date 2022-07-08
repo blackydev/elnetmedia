@@ -579,6 +579,7 @@ header>picture {
  #copyright {
     height: auto;
     font-weight: 300;
+    font-size: 0.8rem;
     display: block;
     margin: 0.4rem 0;
 }
@@ -626,7 +627,7 @@ header>picture {
      overflow-y: hidden;
  }
 
- .js__scroll-animation {
+ .js_scroll-animation {
      transform: translateY(100px);
      opacity: 0;
  }
